@@ -1,10 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Manual do Simples Nacional na Reforma Tributária | One by HMPX</title>
-<link rel="icon" type="image/png" href="favicon.png">
 <style>
 :root{
   --g900:#0d2a1a;--g850:#103720;--g800:#134d2c;--g700:#1a5c38;--g600:#2e7d52;--g500:#3d9c68;--g300:#8dd4ab;--g100:#d6ede1;--g50:#eef7f1;
@@ -70,264 +70,322 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.45;ba
 @media print{
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important} body{background:#fff;font-size:10.5pt}.app{display:block}.side,.topbar,.no-print{display:none!important}.main,.wrap{max-width:none;margin:0;padding:0}.hero{height:260mm;border-radius:0;box-shadow:none;page-break-after:always;overflow:hidden}.hero-grid{grid-template-columns:1.05fr .95fr;padding:18mm 15mm 0;gap:10mm}.hero h2{font-size:37pt;line-height:1.02}.hero .sub{font-size:13pt}.hero-card{padding:14pt}.hero-card h3{font-size:18pt}.hero-card li{font-size:9.5pt;padding:5pt 0}.hero-meta{gap:7pt;margin-top:16pt}.meta{padding:8pt}.meta .v{font-size:8.5pt}.goldbar{position:absolute;bottom:0;left:0;right:0;height:24mm}.goldbar div{font-size:8.3pt;padding:0 8pt}.section{padding:0;border:0;page-break-before:always}.section h2{font-size:25pt}.lead{font-size:13.5pt}.card,.table,.titem,.accordion,.sidebox{box-shadow:none;break-inside:avoid}.grid.g3{grid-template-columns:repeat(3,1fr)}.grid.g2,.decision,.glossary{grid-template-columns:repeat(2,1fr)}.source-list{columns:2}.tabpanel{display:block!important}.tabs,.filters,.btn{display:none!important}.acc-body{display:block!important}.acc-head{border-bottom:1px solid var(--line)}.accordion{break-inside:avoid}.print-only{display:block}.print-note{font-size:9pt;color:#666;border-top:1px solid #ddd;margin-top:18px;padding-top:6px}.footer-doc{break-inside:avoid;box-shadow:none}.ck input{display:none}.ck:before{content:"□";font-size:13pt;color:var(--g700)}a{text-decoration:none;color:inherit}.no-break{break-inside:avoid}.g4{grid-template-columns:repeat(4,1fr)}
 }
+
+
+/* Atualização editorial a partir do PDF consolidado, preservando a interatividade do HTML original. */
+.route-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0 20px}
+.route-card{display:flex;gap:10px;align-items:flex-start;text-decoration:none;background:#fff;border:1px solid rgba(26,92,56,.12);border-radius:14px;padding:14px 15px;box-shadow:var(--shadow);min-height:74px;color:var(--ink2)}
+.route-card:hover{border-color:rgba(26,92,56,.34);transform:translateY(-1px)}
+.route-card b{font-family:ui-monospace,monospace;color:var(--gold-d);font-size:12px;letter-spacing:.1em;min-width:28px}
+.route-card span{font-size:14px;line-height:1.35;color:var(--ink2);font-weight:650}
+.aligned-comparison{display:grid;grid-template-columns:1fr 1fr;background:#fff;border:1px solid rgba(26,92,56,.13);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);margin:18px 0 20px}
+.aligned-head{padding:15px 18px;font-weight:800;color:#fff;font-size:16px}
+.aligned-head.current{background:var(--g800)}
+.aligned-head.future{background:var(--gold);color:var(--g900)}
+.aligned-cell{min-height:58px;padding:14px 18px;border-top:1px solid var(--line);font-size:13.8px;line-height:1.42;color:var(--ink2);display:flex;align-items:center}
+.aligned-cell:nth-child(odd){border-left:1px solid var(--line)}
+.decision-section .sidebox li{padding:14px 19px;font-size:13.8px;line-height:1.42}
+.decision-section .decision .sidebox{border-width:1.25px}
+.decision-section .table td{font-size:13.6px;line-height:1.42;padding:14px}
+.footer-doc{align-items:center;gap:34px}
+.footer-doc-left{min-width:0;flex:1 1 58%}
+.footer-doc-right{max-width:42%;text-align:right;border-left:1px solid rgba(255,255,255,.14);padding-left:26px}
+.footer-label{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);font-weight:850;margin-bottom:8px}
+.footer-doc .contact-line{margin-top:10px}
+.footer-doc .rights{font-size:12px;color:rgba(255,255,255,.52);line-height:1.4;margin-top:14px}
+@media(max-width:980px){.route-grid{grid-template-columns:1fr}.aligned-comparison{grid-template-columns:1fr}.aligned-head.future{border-top:1px solid rgba(255,255,255,.2)}.aligned-cell:nth-child(odd){border-left:0}.footer-doc{display:block}.footer-doc-right{max-width:none;text-align:left;border-left:0;border-top:1px solid rgba(255,255,255,.14);padding-left:0;padding-top:18px;margin-top:18px}}
+@media print{.route-grid{grid-template-columns:repeat(3,1fr)}.route-card{box-shadow:none;break-inside:avoid;min-height:56px;padding:9pt}.aligned-comparison{box-shadow:none;break-inside:avoid}.aligned-cell{min-height:36pt}.footer-doc-right{max-width:43%}.decision-section .tabpanel{display:block!important}.decision-section .tabs{display:none!important}}
+
+
+/* Marca One inserida conforme capa do PDF de referência. */
+.one-circle-mark{width:42px;height:42px;border:1.8px solid var(--gold);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--gold);font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:16px;line-height:1;letter-spacing:-.03em;background:rgba(13,42,26,.06);flex:0 0 auto}
+.side .one-circle-mark{width:38px;height:38px;font-size:14px;margin-bottom:12px;background:rgba(255,255,255,.02)}
+.hero-brand-lockup{display:flex;align-items:center;gap:14px;margin:0 0 28px 0;color:#fff}
+.hero-brand-lockup .one-circle-mark{width:52px;height:52px;font-size:19px;background:transparent}
+.hero-brand-text{display:flex;flex-direction:column;gap:3px}
+.hero-brand-name{font-family:Georgia,'Times New Roman',serif;font-size:25px;line-height:1.05;color:#fff;font-weight:500;letter-spacing:.01em}
+.hero-brand-subtitle{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.68);font-weight:650;line-height:1.2}
+@media(max-width:980px){.hero-brand-lockup{margin-bottom:22px}.hero-brand-name{font-size:22px}.hero-brand-subtitle{font-size:9.5px;letter-spacing:.18em}.hero-brand-lockup .one-circle-mark{width:46px;height:46px;font-size:17px}}
+@media print{.hero-brand-lockup{margin-bottom:14pt}.hero-brand-lockup .one-circle-mark{width:31pt;height:31pt;font-size:12pt}.hero-brand-name{font-size:15pt}.hero-brand-subtitle{font-size:7.5pt;letter-spacing:.18em}.side .one-circle-mark{display:none}}
+
+/* Navegação interna reabilitada para menu lateral e roteiro de leitura. */
+.section[id], .hero[id]{scroll-margin-top:24px}
+.nav a[href^="#"], .route-card[href^="#"]{cursor:pointer}
 </style>
 </head>
 <body>
 <div class="app">
 <aside class="side">
-  <div class="brand"><div class="small">Manual</div><h1>One by HMPX</h1><p>Simples Nacional na Reforma Tributária</p></div>
-  <nav class="nav" id="nav">
-    <div class="navlabel">Roteiro</div>
-    <a href="#sintese"><b>SE</b>Síntese executiva</a>
-    <a href="#base"><b>01</b>Marco normativo</a>
-    <a href="#transicao"><b>02</b>Calendário da transição</a>
-    <a href="#sistema"><b>03</b>Simples antes e depois</a>
-    <a href="#decisao"><b>04</b>Simples unificado ou híbrido</a>
-    <a href="#creditos"><b>05</b>Créditos e competitividade</a>
-    <a href="#setores"><b>06</b>Matriz por perfil de empresa</a>
-    <a href="#documentos"><b>07</b>Documentos fiscais</a>
-    <a href="#riscos"><b>08</b>Riscos de exclusão</a>
-    <a href="#contratos"><b>09</b>Preço, contratos e margem</a>
-    <a href="#one"><b>10</b>Como o One acompanha</a>
-    <a href="#checklist"><b>11</b><em>Checklist</em> operacional</a>
-    <a href="#plano"><b>12</b>Plano de ação</a>
-    <a href="#faq"><b>13</b>Perguntas frequentes</a>
-    <a href="#fontes"><b>14</b>Fontes normativas</a>
-  </nav>
-  <div class="side-foot">HMPX & IIFET<br>Documento educativo e informativo<br>Atualizado em junho de 2026</div>
+<div class="brand"><div class="one-circle-mark">One</div><div class="small">Manual interativo</div><h1>One by HMPX</h1><p>Simples Nacional na Reforma Tributária</p></div>
+<nav class="nav" id="nav">
+<div class="navlabel">Roteiro</div>
+<a aria-label="Navegar para R0 Roteiro de leitura" href="#roteiro"><b>R0</b>Roteiro de leitura</a><a aria-label="Navegar para SE Síntese executiva" href="#sintese"><b>SE</b>Síntese executiva</a><a aria-label="Navegar para 01 Marco normativo" href="#base"><b>01</b>Marco normativo</a><a aria-label="Navegar para 02 Calendário da transição" href="#transicao"><b>02</b>Calendário da transição</a><a aria-label="Navegar para 03 Simples antes e depois" href="#sistema"><b>03</b>Simples antes e depois</a><a aria-label="Navegar para 04 Simples unificado ou híbrido" href="#decisao"><b>04</b>Simples unificado ou híbrido</a><a aria-label="Navegar para 05 Créditos e competitividade" href="#creditos"><b>05</b>Créditos e competitividade</a><a aria-label="Navegar para 06 Matriz por perfil de empresa" href="#setores"><b>06</b>Matriz por perfil de empresa</a><a aria-label="Navegar para 07 Documentos fiscais" href="#documentos"><b>07</b>Documentos fiscais</a><a aria-label="Navegar para 08 Riscos de exclusão" href="#riscos"><b>08</b>Riscos de exclusão</a><a aria-label="Navegar para 09 Preço, contratos e margem" href="#contratos"><b>09</b>Preço, contratos e margem</a><a aria-label="Navegar para 10 Como o One acompanha" href="#one"><b>10</b>Como o One acompanha</a><a aria-label="Navegar para 11 Checklist operacional" href="#checklist"><b>11</b>Checklist operacional</a><a aria-label="Navegar para 12 Plano de ação" href="#plano"><b>12</b>Plano de ação</a><a aria-label="Navegar para 13 Perguntas frequentes" href="#faq"><b>13</b>Perguntas frequentes</a><a aria-label="Navegar para 14 Fontes normativas" href="#fontes"><b>14</b>Fontes normativas</a></nav>
+<div class="side-foot">HMPX &amp; IIFET<br/>Documento educativo e informativo<br/>Atualizado em junho de 2026</div>
 </aside>
 <main class="main">
-  <section class="hero" id="cover">
-    <div class="hero-grid">
-      <div>
-        <div class="eyebrow">Contabilidade consultiva premium · Simples Nacional</div>
-        <h2>Manual do <em>Simples Nacional</em> na Reforma Tributária</h2>
-        <div class="sub">O guia prático do empresário atendido pelo One by HMPX para entender IBS, CBS, regime híbrido, créditos, prazos, documentos fiscais, riscos e decisões operacionais.</div>
-        <div class="hero-meta">
-          <div class="meta"><div class="k">Base normativa</div><div class="v">EC n.º 132/2023 · LC n.º 214/2025 · LC n.º 227/2026</div></div>
-          <div class="meta"><div class="k">Regulamentos</div><div class="v">Decreto n.º 12.955/2026 · Resolução CGIBS n.º 6/2026</div></div>
-          <div class="meta"><div class="k">Regra One</div><div class="v">Empresas do Simples Nacional em crescimento, com acompanhamento ativo.</div></div>
-          <div class="meta"><div class="k">Atualização</div><div class="v">Junho de 2026 · material educativo e informativo.</div></div>
-        </div>
-      </div>
-      <div class="hero-card">
-        <h3>O que este manual resolve</h3>
-        <ul>
-          <li><span class="tick">✓</span><span>Mostra o que muda para quem está no Simples Nacional.</span></li>
-          <li><span class="tick">✓</span><span>Explica a decisão entre recolher IBS/CBS dentro do DAS ou pelo regime regular.</span></li>
-          <li><span class="tick">✓</span><span>Traduz a Reforma em decisões de preço, cadastro, notas e contratos.</span></li>
-          <li><span class="tick">✓</span><span>Organiza um plano de ação para clientes One by HMPX.</span></li>
-        </ul>
-      </div>
-    </div>
-    <div class="goldbar"><div>Sua empresa vai continuar no Simples?</div><div>Vende para empresas que tomam crédito?</div><div>Seu contador já simulou o regime híbrido?</div></div>
-  </section>
-
-  <div class="wrap">
-  <section class="section" id="sintese">
-    <div class="chapter"><span class="num">SE</span></div><h2>Síntese executiva</h2><p class="lead">A Reforma não extingue o Simples Nacional. Todavia, ela transforma o Simples em uma decisão mais técnica, porque IBS e CBS passam a interferir na competitividade, no crédito do cliente, no preço e no fluxo de caixa.</p>
-    <div class="grid g3 no-break">
-      <div class="card pad"><div class="card-top"></div><h3>O Simples permanece</h3><p>O regime continua como tratamento diferenciado para microempresas e empresas de pequeno porte. O ponto novo é a forma de lidar com IBS e CBS.</p></div>
-      <div class="card pad"><div class="card-top gold"></div><h3>A escolha ganha peso</h3><p>O empresário poderá permanecer no modelo unificado ou, conforme o caso, apurar IBS e CBS pelo regime regular, sem sair do Simples.</p></div>
-      <div class="card pad"><div class="card-top"></div><h3>O risco é operacional</h3><p>Notas fiscais, cadastros, classificação de produtos, contratos e faturamento acumulado passam a exigir acompanhamento preventivo.</p></div>
-    </div>
-    <div class="callout green"><div class="clabel">Tese central</div><p>Para o cliente One, a Reforma Tributária deve ser tratada como agenda de gestão: não basta pagar o DAS; será necessário monitorar créditos, faixas, documentos, clientes, fornecedores e impactos comerciais.</p></div>
-  </section>
-
-  <section class="section" id="base">
-    <div class="chapter"><span class="num">01</span></div><h2>Marco normativo essencial</h2><p class="lead">O novo sistema nasce em camadas: Constituição, lei complementar, regulamentos, normas do Comitê Gestor do Simples Nacional e adaptações operacionais nos documentos fiscais.</p>
-    <table class="table">
-      <tr><th>Camada</th><th>Função prática</th><th>O que o empresário precisa saber</th></tr>
-      <tr><td>EC n.º 132/2023</td><td>Altera a Constituição e cria a base do IVA dual brasileiro.</td><td>IBS e CBS substituem progressivamente tributos sobre consumo, com incidência no destino e não cumulatividade ampla.</td></tr>
-      <tr><td>LC n.º 214/2025</td><td>Institui IBS, CBS e Imposto Seletivo, além de regras de apuração, créditos e transição.</td><td>É a lei-base da decisão entre Simples unificado e apuração regular de IBS/CBS.</td></tr>
-      <tr><td>LC n.º 227/2026</td><td>Ajusta pontos operacionais e disciplina gestão e administração do IBS.</td><td>Reforça a necessidade de acompanhar as normas do Comitê Gestor e a integração entre União, Estados e Municípios.</td></tr>
-      <tr><td>Decreto n.º 12.955/2026 e Resolução CGIBS n.º 6/2026</td><td>Regulamentam CBS e IBS, respectivamente.</td><td>Tornam a Reforma executável: documentos, apuração, créditos, obrigações e controles.</td></tr>
-      <tr><td>Resolução CGSN n.º 186/2026</td><td>Define prazos e condições de opção para 2027.</td><td>Setembro de 2026 passa a ser mês crítico de decisão para o Simples e, de forma excepcional, para o regime regular de IBS/CBS em 2027.</td></tr>
-    </table>
-  </section>
-
-  <section class="section" id="transicao">
-    <div class="chapter"><span class="num">02</span></div><h2>Calendário da transição</h2><p class="lead">A transição não ocorre em um único dia. O ponto sensível para o empresário do Simples é identificar quando cada obrigação afeta preço, documento fiscal e escolha de regime.</p>
-    <div class="timeline">
-      <div class="titem"><div class="year">2026</div><div><h3>Ano de teste e preparação</h3><p>CBS em 0,9% e IBS em 0,1% como alíquotas de teste no sistema geral, com caráter predominantemente informativo. Para clientes One, é o ano de saneamento cadastral, revisão de produtos, clientes e fornecedores.</p></div></div>
-      <div class="titem"><div class="year">Set/26</div><div><h3>Janela de opção para 2027</h3><p>De 1.º a 30 de setembro de 2026, deve ser formalizada a opção pelo Simples Nacional para 2027 e, de forma excepcional, a opção pelo regime regular de IBS/CBS aplicável de janeiro a junho de 2027.</p></div></div>
-      <div class="titem"><div class="year">2027</div><div><h3>CBS plena e PIS/Cofins extintos</h3><p>Início pleno da CBS, inclusive para optantes pelo Simples Nacional, com extinção de PIS e Cofins e adaptação dos anexos do Simples à nova composição tributária.</p></div></div>
-      <div class="titem"><div class="year">2029-32</div><div><h3>Convivência gradual com ICMS/ISS</h3><p>ICMS e ISS são reduzidos gradualmente, enquanto o IBS avança. A leitura de margem, preço e crédito torna-se mais relevante ano a ano.</p></div></div>
-      <div class="titem"><div class="year">2033</div><div><h3>Virada definitiva</h3><p>Extinção de ICMS e ISS e operação integral do novo modelo de IVA dual, com centralidade de documentos digitais e apuração assistida.</p></div></div>
-    </div>
-  </section>
-
-  <section class="section" id="sistema">
-    <div class="chapter"><span class="num">03</span></div><h2>Simples Nacional antes e depois</h2><p class="lead">O Simples deixa de ser apenas uma guia simplificada e passa a exigir análise de cadeia econômica. A pergunta deixa de ser somente “quanto pago no DAS?” e passa a ser “como meu tributo afeta meu cliente e minha margem?”.</p>
-    <div class="grid g2">
-      <div class="sidebox"><h3>Sistema atual</h3><ul><li>DAS como centro da rotina fiscal.</li><li>Foco em faturamento, anexo, folha e segregação de receitas.</li><li>Menor visibilidade sobre créditos na cadeia.</li><li>Competitividade analisada quase sempre pelo preço final.</li></ul></div>
-      <div class="sidebox gold"><h3>Novo ambiente</h3><ul><li>DAS continua relevante, mas IBS e CBS entram na matriz decisória.</li><li>Clientes do regime regular passam a observar créditos disponíveis.</li><li>Opção pelo regime regular pode afetar preço, crédito e caixa.</li><li>Notas fiscais e cadastros passam a ser prova operacional da conformidade.</li></ul></div>
-    </div>
-    <div class="callout"><div class="clabel">Leitura One</div><p>Empresas B2C tendem a preservar maior aderência ao Simples unificado; empresas B2B, inseridas em cadeias com adquirentes que tomam crédito, exigem simulação antes da opção.</p></div>
-  </section>
-
-  <section class="section" id="decisao">
-    <div class="chapter"><span class="num">04</span></div><h2>Simples unificado ou regime híbrido?</h2><p class="lead">A escolha central da Reforma para o optante pelo Simples Nacional é a forma de apurar IBS e CBS: dentro do regime unificado, como parte do DAS, ou fora dele, pelo regime regular aplicável a esses tributos.</p>
-    <div class="tabs no-print"><button class="tab active" onclick="showTab('unificado',this)">Simples unificado</button><button class="tab" onclick="showTab('hibrido',this)">Regime híbrido</button><button class="tab" onclick="showTab('comparativo',this)">Comparativo</button></div>
-    <div id="tab-unificado" class="tabpanel active"><div class="decision"><div class="sidebox"><h3>Quando tende a fazer sentido</h3><ul><li>Venda predominante para consumidor final.</li><li>Baixa pressão comercial por transferência de créditos.</li><li>Margem sensível a aumento de complexidade operacional.</li><li>Empresa ainda sem maturidade documental suficiente.</li></ul></div><div class="sidebox gold"><h3>Pontos de atenção</h3><ul><li>O próprio optante não se apropria de créditos de IBS/CBS.</li><li>Adquirente do regime regular pode ter crédito limitado ao valor efetivamente pago via Simples.</li><li>Clientes empresariais podem comparar fornecedores pela capacidade de gerar crédito.</li></ul></div></div></div>
-    <div id="tab-hibrido" class="tabpanel"><div class="decision"><div class="sidebox"><h3>Quando tende a ser avaliado</h3><ul><li>Venda relevante para empresas do regime regular.</li><li>Participação em cadeias B2B, fornecimento recorrente ou contratos corporativos.</li><li>Cliente valoriza crédito amplo de IBS/CBS.</li><li>Empresa tem organização contábil, fiscal e documental suficiente.</li></ul></div><div class="sidebox gold"><h3>Custo da escolha</h3><ul><li>IBS e CBS deixam de ser recolhidos pelo regime único.</li><li>Aumentam exigências de apuração, controle de créditos e fluxo de caixa.</li><li>Decisão exige simulação, não intuição.</li><li>Pode haver vedação de retorno em hipóteses específicas, como recebimento de ressarcimento de créditos.</li></ul></div></div></div>
-    <div id="tab-comparativo" class="tabpanel"><table class="table"><tr><th>Critério</th><th>Simples unificado</th><th>Regime híbrido</th></tr><tr><td>Complexidade</td><td>Menor</td><td>Maior</td></tr><tr><td>Crédito do próprio optante</td><td>Não há apropriação de créditos de IBS/CBS</td><td>Há apuração pelo regime regular, com lógica de créditos</td></tr><tr><td>Crédito do cliente B2B</td><td>Limitado ao valor pago por meio do Simples</td><td>Tende a ser mais competitivo para clientes que tomam crédito</td></tr><tr><td>Perfil mais provável</td><td>B2C, varejo local, serviços ao consumidor</td><td>B2B, atacado, fornecedor corporativo, cadeia industrial ou logística</td></tr></table></div>
-    <div class="print-only"><table class="table"><tr><th>Regime</th><th>Quando avaliar</th><th>Ponto crítico</th></tr><tr><td>Simples unificado</td><td>Venda ao consumidor final, baixa relevância de crédito ao cliente.</td><td>Menor complexidade, mas pode reduzir atratividade para clientes que usam crédito.</td></tr><tr><td>Regime híbrido</td><td>Vendas B2B, contratos com empresas do regime regular, cadeia com pressão de crédito.</td><td>Maior controle, maior apuração e necessidade de simulação individualizada.</td></tr></table></div>
-  </section>
-
-  <section class="section" id="creditos">
-    <div class="chapter"><span class="num">05</span></div><h2>Créditos e competitividade</h2><p class="lead">A não cumulatividade ampla desloca parte da concorrência para a qualidade fiscal do fornecedor. No novo modelo, o cliente empresarial não olhará apenas o preço: também olhará o crédito aproveitável.</p>
-    <div class="grid g3">
-      <div class="card pad"><div class="card-top"></div><h3>Fornecedor B2C</h3><p>Quando o adquirente é consumidor final, a discussão de crédito costuma ter menor peso. A atenção concentra-se em preço, margem e conformidade documental.</p></div>
-      <div class="card pad"><div class="card-top gold"></div><h3>Fornecedor B2B</h3><p>Quando o adquirente é contribuinte do regime regular, o crédito gerado pela compra pode influenciar a escolha do fornecedor.</p></div>
-      <div class="card pad"><div class="card-top"></div><h3>Fornecedor misto</h3><p>Quando há carteira B2C e B2B, a decisão deve ser segmentada por receita, cliente, margem, recorrência e peso do crédito na negociação.</p></div>
-    </div>
-    <div class="callout red"><div class="clabel">Risco comercial</div><p>Uma empresa do Simples que vende para grandes clientes pode perder competitividade se o cliente perceber que a compra gera crédito inferior ao de outro fornecedor sujeito ao regime regular. A solução não é optar automaticamente pelo regime híbrido, mas sim simular o impacto.</p></div>
-  </section>
-
-  <section class="section" id="setores">
-    <div class="chapter"><span class="num">06</span></div><h2>Matriz por perfil de empresa</h2><p class="lead">A Reforma não produz o mesmo efeito para todos. O setor, o tipo de cliente e a intensidade de insumos definem a prioridade de análise.</p>
-    <div class="filters no-print"><button class="filter active" onclick="filterCards('all',this)">Todos</button><button class="filter" onclick="filterCards('b2c',this)">B2C</button><button class="filter" onclick="filterCards('b2b',this)">B2B</button><button class="filter" onclick="filterCards('servico',this)">Serviços</button><button class="filter" onclick="filterCards('comercio',this)">Comércio</button></div>
-    <div class="grid g3" id="matrix">
-      <div class="card pad matrix-card" data-cat="b2c comercio"><h3>Varejo local B2C</h3><p>Prioridade: nota fiscal, preço, margem e controle de faturamento. Regime unificado tende a ser ponto de partida, salvo cadeia específica.</p></div>
-      <div class="card pad matrix-card" data-cat="b2b comercio"><h3>Atacado ou distribuidor</h3><p>Prioridade: crédito do cliente, contratos, margem e simulação do regime híbrido. Alto risco de comparação fiscal por adquirentes.</p></div>
-      <div class="card pad matrix-card" data-cat="servico b2c"><h3>Serviços ao consumidor</h3><p>Prioridade: NFS-e, precificação, retenções residuais e comunicação clara ao cliente final. Crédito do adquirente tende a ser menos relevante.</p></div>
-      <div class="card pad matrix-card" data-cat="servico b2b"><h3>Serviços para empresas</h3><p>Prioridade: competitividade contratual, crédito do tomador, revisão de propostas e cláusulas tributárias.</p></div>
-      <div class="card pad matrix-card" data-cat="b2b comercio"><h3>Indústria ou pequena produção</h3><p>Prioridade: insumos, crédito, estoque, documento fiscal e contratos de fornecimento. Exige análise de cadeia.</p></div>
-      <div class="card pad matrix-card" data-cat="b2c b2b"><h3>Empresa mista</h3><p>Prioridade: separar receitas por canal, cliente e margem. A decisão não deve ser tomada por sensação geral de faturamento.</p></div>
-    </div>
-  </section>
-
-  <section class="section" id="documentos">
-    <div class="chapter"><span class="num">07</span></div><h2>Documentos fiscais e rotina digital</h2><p class="lead">No novo modelo, a nota fiscal deixa de ser apenas documento de venda e passa a ser a principal evidência da apuração. O erro documental tende a gerar erro de crédito, erro de preço e risco de autuação.</p>
-    <div class="grid g2">
-      <div class="card pad"><h3>O que revisar no cadastro</h3><p>NCM, CNAE, descrição de produtos e serviços, natureza da operação, município de destino, CFOP quando aplicável, parametrização do ERP e segregação de receitas.</p></div>
-      <div class="card pad"><h3>O que revisar nas notas</h3><p>Campos de IBS/CBS, classificação tributária, base de cálculo, dados do adquirente, local de consumo, informações de crédito e consistência com contratos.</p></div>
-      <div class="card pad"><h3>O que revisar nos clientes</h3><p>Quem compra como consumidor final, quem compra como contribuinte do regime regular, quem exige crédito e quem tem contrato de fornecimento recorrente.</p></div>
-      <div class="card pad"><h3>O que revisar no sistema</h3><p>Integração fiscal, parâmetros do Simples, emissão de NF-e/NFS-e, controle de faturamento acumulado, relatórios e conciliação.</p></div>
-    </div>
-    <div class="callout green"><div class="clabel">Regra operacional</div><p>Para clientes One, a preparação documental deve anteceder a decisão de regime. Empresa sem cadastro confiável não deve decidir por regime mais complexo sem saneamento prévio.</p></div>
-  </section>
-
-  <section class="section" id="riscos">
-    <div class="chapter"><span class="num">08</span></div><h2>Riscos de exclusão e alertas de faturamento</h2><p class="lead">O limite de faturamento do Simples continua sendo eixo estrutural do regime. A diferença é que, com a Reforma, ultrapassar faixas ou deixar de planejar a transição pode afetar não apenas imposto, mas contratos, preço e continuidade comercial.</p>
-    <div class="grid g4">
-      <div class="stat"><div class="big">75%</div><div class="label">Alerta preventivo</div></div>
-      <div class="stat"><div class="big">90%</div><div class="label">Zona de decisão</div></div>
-      <div class="stat"><div class="big">100%</div><div class="label">Limite crítico</div></div>
-      <div class="stat"><div class="big">4,8 mi</div><div class="label">Teto anual do Simples</div></div>
-    </div>
-    <table class="table" style="margin-top:18px"><tr><th>Sinal</th><th>Risco</th><th>Resposta One</th></tr><tr><td>Faturamento acelerado</td><td>Exclusão ou mudança de regime sem preparação.</td><td>Monitoramento mensal, projeção e reunião de orientação.</td></tr><tr><td>Cliente B2B exigindo crédito</td><td>Perda de competitividade em contratos.</td><td>Simulação entre Simples unificado e regime híbrido.</td></tr><tr><td>Cadastro fiscal desorganizado</td><td>Erro em nota, crédito e apuração.</td><td>Saneamento cadastral e orientação de emissão.</td></tr><tr><td>Pendência fiscal</td><td>Risco de impedimento, exclusão ou certidão negativa comprometida.</td><td>Acompanhamento de CNDs e regularização dentro do escopo contratado.</td></tr></table>
-  </section>
-
-  <section class="section" id="contratos">
-    <div class="chapter"><span class="num">09</span></div><h2>Preço, contratos e margem</h2><p class="lead">A Reforma exige que o empresário deixe de tratar tributo como “custo invisível”. Preço, cláusula tributária e reajuste contratual passam a integrar a gestão fiscal.</p>
-    <div class="grid g3">
-      <div class="card pad"><h3>Preço</h3><p>Revisar se o preço atual absorve a transição de tributos, eventuais créditos do adquirente e custos de conformidade.</p></div>
-      <div class="card pad"><h3>Contratos</h3><p>Incluir cláusulas sobre alterações tributárias, reequilíbrio, destaque de tributos e mudanças na forma de apuração.</p></div>
-      <div class="card pad"><h3>Margem</h3><p>Medir margem por produto, serviço, canal e cliente. Sem DRE e conciliação, a decisão tributária será imprecisa.</p></div>
-    </div>
-    <div class="callout"><div class="clabel">Orientação prática</div><p>Antes de aceitar desconto por pressão de cliente B2B, a empresa deve verificar se o problema é preço nominal ou perda de crédito tributário para o adquirente.</p></div>
-  </section>
-
-  <section class="section" id="one">
-    <div class="chapter"><span class="num">10</span></div><h2>Como o One by HMPX acompanha essa transição</h2><p class="lead">O One foi desenhado para empresas do Simples Nacional que precisam de contabilidade consultiva, não apenas de guias. Na Reforma, essa diferença deixa de ser comercial e passa a ser operacional.</p>
-    <div class="grid g3">
-      <div class="card pad"><div class="card-top"></div><h3>Monitoramento contínuo</h3><p>Acompanhamento de faturamento acumulado, risco de exclusão do Simples e alterações legislativas que impactem o regime.</p></div>
-      <div class="card pad"><div class="card-top gold"></div><h3>Relatório trimestral</h3><p>Síntese fiscal, DRE simplificada, alertas e orientações estratégicas em linguagem acessível ao empresário.</p></div>
-      <div class="card pad"><div class="card-top"></div><h3>Reunião consultiva</h3><p>Leitura estratégica do trimestre, decisões de preço, regime, documentação e crescimento com base em dados reais.</p></div>
-      <div class="card pad"><h3>SLA de atendimento</h3><p>Atendimento por WhatsApp central e e-mail institucional, com prazos de resposta definidos conforme complexidade da demanda.</p></div>
-      <div class="card pad"><h3>Blindagem tributária ativa</h3><p>Revisão de enquadramento, certidões, pendências e prevenção de autuações dentro do escopo do One.</p></div>
-      <div class="card pad"><h3>Migração orientada</h3><p>Quando a empresa ultrapassa o porte do Simples, a evolução para a HMPX principal pode ser conduzida como transição estruturada.</p></div>
-    </div>
-  </section>
-
-  <section class="section" id="checklist">
-    <div class="chapter"><span class="num">11</span></div><h2><em>Checklist</em> operacional do cliente</h2><p class="lead">Use este roteiro para verificar se a empresa está minimamente preparada para a primeira análise da Reforma Tributária dentro do acompanhamento One.</p>
-    <div class="mini no-print">Progresso do <em>checklist</em>: <span id="ckcount">0/12</span></div><div class="progress no-print"><div id="ckbar"></div></div>
-    <div class="checklist">
-      <label class="ck"><input type="checkbox" onchange="updateChecklist()"><span>Confirmar regime atual e situação cadastral no Simples Nacional.</span></label>
-      <label class="ck"><input type="checkbox" onchange="updateChecklist()"><span>Levantar faturamento dos últimos 12 meses e projeção dos próximos 12 meses.</span></label>
-      <label class="ck"><input type="checkbox" onchange="updateChecklist()"><span>Separar receitas por canal: consumidor final, empresas do regime regular e vendas mistas.</span></label>
-      <label class="ck"><input type="checkbox" onchange="updateChecklist()"><span>Identificar clientes B2B que exigem crédito tributário ou renegociam preço por crédito.</span></label>
-      <label class="ck"><input type="checkbox" onchange="updateChecklist()"><span>Revisar cadastro de produtos, serviços, NCM, CNAE e descrição fiscal.</span></label>
-      <label class="ck"><input type="checkbox" onchange="updateChecklist()"><span>Validar emissão de NF-e, NFS-e, CT-e ou documentos correlatos, conforme a operação.</span></label>
-      <label class="ck"><input type="checkbox" onchange="updateChecklist()"><span>Mapear fornecedores essenciais e verificar se estão no Simples ou no regime regular.</span></label>
-      <label class="ck"><input type="checkbox" onchange="updateChecklist()"><span>Revisar contratos recorrentes quanto a reajuste, alteração tributária e equilíbrio econômico.</span></label>
-      <label class="ck"><input type="checkbox" onchange="updateChecklist()"><span>Conferir pendências fiscais, CNDs, parcelamentos e regularidade cadastral.</span></label>
-      <label class="ck"><input type="checkbox" onchange="updateChecklist()"><span>Preparar DRE simplificada para medir margem antes da simulação.</span></label>
-      <label class="ck"><input type="checkbox" onchange="updateChecklist()"><span>Simular Simples unificado versus regime híbrido quando houver relevância B2B.</span></label>
-      <label class="ck"><input type="checkbox" onchange="updateChecklist()"><span>Registrar a decisão com justificativa técnica e revisão periódica.</span></label>
-    </div>
-  </section>
-
-  <section class="section" id="plano">
-    <div class="chapter"><span class="num">12</span></div><h2>Plano de ação em três ciclos</h2><p class="lead">A implementação deve ser gradual. O objetivo é evitar decisões apressadas em setembro de 2026 e preparar a empresa para 2027 com dados consistentes.</p>
-    <div class="grid g3">
-      <div class="card pad"><div class="card-top"></div><h3>0-30 dias · Diagnóstico</h3><p>Levantamento de faturamento, clientes, fornecedores, documentos fiscais, pendências e perfil de operação.</p></div>
-      <div class="card pad"><div class="card-top gold"></div><h3>31-60 dias · Saneamento</h3><p>Correção de cadastros, parametrização, revisão de contratos e organização de dados para simulação.</p></div>
-      <div class="card pad"><div class="card-top"></div><h3>61-90 dias · Decisão</h3><p>Simulação comparativa, definição de regime para IBS/CBS quando cabível, orientação de preço e documentação da decisão.</p></div>
-    </div>
-  </section>
-
-  <section class="section" id="faq">
-    <div class="chapter"><span class="num">13</span></div><h2>Perguntas frequentes do empresário</h2><p class="lead">As respostas abaixo foram formuladas para conversas com clientes do One by HMPX, com linguagem prática e sem perda de precisão técnica.</p>
-    <div class="accordion open"><div class="acc-head" onclick="toggleAcc(this)">O Simples Nacional vai acabar? <span>+</span></div><div class="acc-body">Não. O Simples Nacional permanece como regime favorecido para microempresas e empresas de pequeno porte. O que muda é o ambiente de decisão: IBS e CBS passam a exigir análise de créditos, documentos, clientes e opção de apuração.</div></div>
-    <div class="accordion open"><div class="acc-head" onclick="toggleAcc(this)">Vou continuar pagando DAS? <span>+</span></div><div class="acc-body">Em regra, sim. Contudo, a legislação permite que o optante pelo Simples apure IBS e CBS pelo regime regular em determinadas condições, hipótese em que essas parcelas não serão cobradas pelo regime único.</div></div>
-    <div class="accordion open"><div class="acc-head" onclick="toggleAcc(this)">Todo cliente One deve optar pelo regime híbrido? <span>+</span></div><div class="acc-body">Não. A opção depende do perfil da empresa, da proporção de vendas B2B, da margem, da maturidade documental e do peso do crédito para os clientes. A decisão deve ser simulada.</div></div>
-    <div class="accordion open"><div class="acc-head" onclick="toggleAcc(this)">Vender para consumidor final muda a análise? <span>+</span></div><div class="acc-body">Sim. Quando o cliente é consumidor final, a discussão sobre crédito do adquirente tende a ter menor peso. Nesses casos, a análise costuma concentrar-se em preço, margem, nota fiscal e regularidade.</div></div>
-    <div class="accordion open"><div class="acc-head" onclick="toggleAcc(this)">Por que setembro de 2026 é importante? <span>+</span></div><div class="acc-body">Porque a Resolução CGSN n.º 186/2026 definiu que a opção pelo Simples Nacional para 2027 e, de forma excepcional, a opção pelo regime regular de IBS/CBS para janeiro a junho de 2027 devem ser formalizadas entre 1.º e 30 de setembro de 2026.</div></div>
-    <div class="accordion open"><div class="acc-head" onclick="toggleAcc(this)">O que devo fazer agora? <span>+</span></div><div class="acc-body">Organizar cadastro, documentos fiscais, clientes, fornecedores, contratos, faturamento e DRE. Depois disso, a equipe One poderá conduzir simulação e orientar a decisão.</div></div>
-  </section>
-
-  <section class="section" id="fontes">
-    <div class="chapter"><span class="num">14</span></div><h2>Fontes normativas e referências</h2><p class="lead">O material foi construído com base nas normas estruturantes da Reforma Tributária do Consumo e nas referências institucionais do One by HMPX.</p>
-    <ol class="source-list">
-      <li>Emenda Constitucional n.º 132, de 20 de dezembro de 2023.</li>
-      <li>Lei Complementar n.º 123, de 14 de dezembro de 2006.</li>
-      <li>Lei Complementar n.º 214, de 16 de janeiro de 2025.</li>
-      <li>Lei Complementar n.º 227, de 13 de janeiro de 2026.</li>
-      <li>Decreto n.º 12.955, de 29 de abril de 2026 - Regulamento da CBS.</li>
-      <li>Resolução CGIBS n.º 6, de 30 de abril de 2026 - Regulamento do IBS.</li>
-      <li>Portaria Conjunta MF/CGIBS n.º 7, de 30 de abril de 2026.</li>
-      <li>Resolução CGSN n.º 186, de 17 de abril de 2026.</li>
-      <li>Materiais institucionais One by HMPX.</li>
-    </ol>
-    <div class="callout green">
-    <div class="clabel">Nota de uso</div>
-    <p>Este manual é material educativo e informativo. A opção por regime, alteração de preço, revisão contratual ou estratégia tributária deve ser precedida de análise individualizada da operação, do faturamento, da carteira de clientes, dos fornecedores e dos documentos fiscais da empresa.</p>
+<section class="hero" id="cover">
+<div class="hero-grid">
+<div>
+<div class="hero-brand-lockup"><div class="one-circle-mark">One</div><div class="hero-brand-text"><div class="hero-brand-name">One by HMPX</div><div class="hero-brand-subtitle">CONTABILIDADE CONSULTIVA PREMIUM</div></div></div><div class="eyebrow">Contabilidade consultiva premium · Simples Nacional</div>
+<h2>Manual do <em>Simples Nacional</em> na Reforma Tributária</h2>
+<div class="sub">O guia prático do empresário atendido pelo One by HMPX para entender IBS, CBS, regime híbrido, créditos, prazos, documentos fiscais, riscos e decisões operacionais.</div>
+<div class="hero-meta">
+<div class="meta"><div class="k">Base normativa</div><div class="v">EC n.º 132/2023 · LC n.º 214/2025 · LC n.º 227/2026</div></div>
+<div class="meta"><div class="k">Regulamentos</div><div class="v">Decreto n.º 12.955/2026 · Resolução CGIBS n.º 6/2026</div></div>
+<div class="meta"><div class="k">Regra One</div><div class="v">Empresas do Simples Nacional em crescimento, com acompanhamento ativo.</div></div>
+<div class="meta"><div class="k">Atualização</div><div class="v">Junho de 2026 · material educativo e informativo.</div></div>
 </div>
-
+</div>
+<div class="hero-card">
+<h3>O que este manual resolve</h3>
+<ul>
+<li><span class="tick">✓</span><span>Mostra o que muda para quem está no Simples Nacional.</span></li>
+<li><span class="tick">✓</span><span>Explica a decisão entre recolher IBS/CBS dentro do DAS ou pelo regime regular.</span></li>
+<li><span class="tick">✓</span><span>Traduz a Reforma em decisões de preço, cadastro, notas e contratos.</span></li>
+<li><span class="tick">✓</span><span>Organiza um plano de ação para clientes One by HMPX.</span></li>
+</ul>
+</div>
+</div>
+<div class="goldbar"><div>Sua empresa vai continuar no Simples?</div><div>Vende para empresas que tomam crédito?</div><div>Seu contador já simulou o regime híbrido?</div></div>
+</section>
+<div class="wrap">
+<section class="section" id="roteiro">
+<div class="chapter"><span class="num">R0</span></div>
+<h2>Roteiro de leitura</h2>
+<p class="lead">A navegação do manual foi convertida para uma página editorial de consulta rápida, preservando a lógica da página institucional One by HMPX e facilitando o uso do material em reuniões, envio comercial e acompanhamento consultivo.</p>
+<div class="route-grid no-break">
+<a aria-label="Navegar para SE Síntese executiva" class="route-card" href="#sintese"><b>SE</b><span>Síntese executiva</span></a>
+<a aria-label="Navegar para 01 Marco normativo essencial" class="route-card" href="#base"><b>01</b><span>Marco normativo essencial</span></a>
+<a aria-label="Navegar para 02 Calendário da transição" class="route-card" href="#transicao"><b>02</b><span>Calendário da transição</span></a>
+<a aria-label="Navegar para 03 Simples Nacional antes e depois" class="route-card" href="#sistema"><b>03</b><span>Simples Nacional antes e depois</span></a>
+<a aria-label="Navegar para 04 Simples unificado ou regime híbrido" class="route-card" href="#decisao"><b>04</b><span>Simples unificado ou regime híbrido</span></a>
+<a aria-label="Navegar para 05 Créditos e competitividade" class="route-card" href="#creditos"><b>05</b><span>Créditos e competitividade</span></a>
+<a aria-label="Navegar para 06 Matriz por perfil de empresa" class="route-card" href="#setores"><b>06</b><span>Matriz por perfil de empresa</span></a>
+<a aria-label="Navegar para 07 Documentos fiscais e rotina digital" class="route-card" href="#documentos"><b>07</b><span>Documentos fiscais e rotina digital</span></a>
+<a aria-label="Navegar para 08 Riscos de exclusão e alertas" class="route-card" href="#riscos"><b>08</b><span>Riscos de exclusão e alertas</span></a>
+<a aria-label="Navegar para 09 Preço, contratos e margem" class="route-card" href="#contratos"><b>09</b><span>Preço, contratos e margem</span></a>
+<a aria-label="Navegar para 10 Acompanhamento One by HMPX" class="route-card" href="#one"><b>10</b><span>Acompanhamento One by HMPX</span></a>
+<a aria-label="Navegar para 11 Checklist operacional" class="route-card" href="#checklist"><b>11</b><span><em>Checklist</em> operacional</span></a>
+<a aria-label="Navegar para 12 Plano de ação em três ciclos" class="route-card" href="#plano"><b>12</b><span>Plano de ação em três ciclos</span></a>
+<a aria-label="Navegar para 13 Perguntas frequentes" class="route-card" href="#faq"><b>13</b><span>Perguntas frequentes</span></a>
+<a aria-label="Navegar para 14 Fontes normativas e referências" class="route-card" href="#fontes"><b>14</b><span>Fontes normativas e referências</span></a>
+</div>
+<div class="callout"><div class="clabel">Uso recomendado</div><p>Utilize este roteiro como índice executivo: primeiro, delimita-se o risco; depois, identifica-se o perfil operacional; por fim, define-se se haverá simples manutenção do regime unificado ou simulação do regime híbrido de IBS/CBS.</p></div>
+</section>
+<section class="section" id="sintese">
+<div class="chapter"><span class="num">SE</span></div><h2>Síntese executiva</h2><p class="lead">A Reforma não extingue o Simples Nacional. Todavia, ela transforma o Simples em uma decisão mais técnica, porque IBS e CBS passam a interferir na competitividade, no crédito do cliente, no preço e no fluxo de caixa.</p>
+<div class="grid g3 no-break">
+<div class="card pad"><div class="card-top"></div><h3>O Simples permanece</h3><p>O regime continua como tratamento diferenciado para microempresas e empresas de pequeno porte. O ponto novo é a forma de lidar com IBS e CBS.</p></div>
+<div class="card pad"><div class="card-top gold"></div><h3>A escolha ganha peso</h3><p>O empresário poderá permanecer no modelo unificado ou, conforme o caso, apurar IBS e CBS pelo regime regular, sem sair do Simples.</p></div>
+<div class="card pad"><div class="card-top"></div><h3>O risco é operacional</h3><p>Notas fiscais, cadastros, classificação de produtos, contratos e faturamento acumulado passam a exigir acompanhamento preventivo.</p></div>
+</div>
+<div class="callout green"><div class="clabel">Tese central</div><p>Para o cliente One, a Reforma Tributária deve ser tratada como agenda de gestão: não basta pagar o DAS; será necessário monitorar créditos, faixas, documentos, clientes, fornecedores e impactos comerciais.</p></div>
+</section>
+<section class="section" id="base">
+<div class="chapter"><span class="num">01</span></div><h2>Marco normativo essencial</h2><p class="lead">O novo sistema nasce em camadas: Constituição, lei complementar, regulamentos, normas do Comitê Gestor do Simples Nacional e adaptações operacionais nos documentos fiscais.</p>
+<table class="table">
+<tr><th>Camada</th><th>Função prática</th><th>O que o empresário precisa saber</th></tr>
+<tr><td>EC n.º 132/2023</td><td>Altera a Constituição e cria a base do IVA dual brasileiro.</td><td>IBS e CBS substituem progressivamente tributos sobre consumo, com incidência no destino e não cumulatividade ampla.</td></tr>
+<tr><td>LC n.º 214/2025</td><td>Institui IBS, CBS e Imposto Seletivo, além de regras de apuração, créditos e transição.</td><td>É a lei-base da decisão entre Simples unificado e apuração regular de IBS/CBS.</td></tr>
+<tr><td>LC n.º 227/2026</td><td>Ajusta pontos operacionais e disciplina gestão e administração do IBS.</td><td>Reforça a necessidade de acompanhar as normas do Comitê Gestor e a integração entre União, Estados e Municípios.</td></tr>
+<tr><td>Decreto n.º 12.955/2026 e Resolução CGIBS n.º 6/2026</td><td>Regulamentam CBS e IBS, respectivamente.</td><td>Tornam a Reforma executável: documentos, apuração, créditos, obrigações e controles.</td></tr>
+<tr><td>Resolução CGSN n.º 186/2026</td><td>Define prazos e condições de opção para 2027.</td><td>Setembro de 2026 passa a ser mês crítico de decisão para o Simples e, de forma excepcional, para o regime regular de IBS/CBS em 2027.</td></tr>
+</table>
+</section>
+<section class="section" id="transicao">
+<div class="chapter"><span class="num">02</span></div><h2>Calendário da transição</h2><p class="lead">A transição não ocorre em um único dia. O ponto sensível para o empresário do Simples é identificar quando cada obrigação afeta preço, documento fiscal e escolha de regime.</p>
+<div class="timeline">
+<div class="titem"><div class="year">2026</div><div><h3>Ano de teste e preparação</h3><p>CBS em 0,9% e IBS em 0,1% como alíquotas de teste no sistema geral, com caráter predominantemente informativo. Para clientes One, é o ano de saneamento cadastral, revisão de produtos, clientes e fornecedores.</p></div></div>
+<div class="titem"><div class="year">Set/26</div><div><h3>Janela de opção para 2027</h3><p>De 1.º a 30 de setembro de 2026, deve ser formalizada a opção pelo Simples Nacional para 2027 e, de forma excepcional, a opção pelo regime regular de IBS/CBS aplicável de janeiro a junho de 2027.</p></div></div>
+<div class="titem"><div class="year">2027</div><div><h3>CBS plena e PIS/Cofins extintos</h3><p>Início pleno da CBS, inclusive para optantes pelo Simples Nacional, com extinção de PIS e Cofins e adaptação dos anexos do Simples à nova composição tributária.</p></div></div>
+<div class="titem"><div class="year">2029-32</div><div><h3>Convivência gradual com ICMS/ISS</h3><p>ICMS e ISS são reduzidos gradualmente, enquanto o IBS avança. A leitura de margem, preço e crédito torna-se mais relevante ano a ano.</p></div></div>
+<div class="titem"><div class="year">2033</div><div><h3>Virada definitiva</h3><p>Extinção de ICMS e ISS e operação integral do novo modelo de IVA dual, com centralidade de documentos digitais e apuração assistida.</p></div></div>
+</div>
+</section>
+<section class="section" id="sistema">
+<div class="chapter"><span class="num">03</span></div><h2>Simples Nacional antes e depois</h2><p class="lead">O Simples deixa de ser apenas uma guia simplificada e passa a exigir análise de cadeia econômica. A pergunta deixa de ser somente “quanto pago no DAS?” e passa a ser “como meu tributo afeta meu cliente e minha margem?”.</p>
+<div class="aligned-comparison no-break">
+<div class="aligned-head current">Sistema atual</div>
+<div class="aligned-head future">Novo ambiente</div>
+<div class="aligned-cell">DAS como centro da rotina fiscal.</div>
+<div class="aligned-cell">DAS continua relevante, mas IBS e CBS entram na matriz decisória.</div>
+<div class="aligned-cell">Foco em faturamento, anexo, folha e segregação de receitas.</div>
+<div class="aligned-cell">Clientes do regime regular passam a observar créditos disponíveis.</div>
+<div class="aligned-cell">Menor visibilidade sobre créditos na cadeia.</div>
+<div class="aligned-cell">Opção pelo regime regular pode afetar preço, crédito e caixa.</div>
+<div class="aligned-cell">Competitividade analisada quase sempre pelo preço final.</div>
+<div class="aligned-cell">Notas fiscais e cadastros passam a ser prova operacional da conformidade.</div>
+</div>
+<div class="callout"><div class="clabel">Leitura One</div><p>Empresas B2C tendem a preservar maior aderência ao Simples unificado; empresas B2B, inseridas em cadeias com adquirentes que tomam crédito, exigem simulação antes da opção.</p></div>
+</section>
+<section class="section decision-section" id="decisao">
+<div class="chapter"><span class="num">04</span></div><h2>Simples unificado ou regime híbrido?</h2><p class="lead">A escolha central da Reforma para o optante pelo Simples Nacional é a forma de apurar IBS e CBS: dentro do regime unificado, como parte do DAS, ou fora dele, pelo regime regular aplicável a esses tributos.</p>
+<div class="tabs no-print"><button class="tab active" onclick="showTab('unificado',this)">Simples unificado</button><button class="tab" onclick="showTab('hibrido',this)">Regime híbrido</button><button class="tab" onclick="showTab('comparativo',this)">Comparativo</button></div>
+<div class="tabpanel active" id="tab-unificado"><div class="decision"><div class="sidebox"><h3>Quando tende a fazer sentido</h3><ul><li>Venda predominante para consumidor final.</li><li>Baixa pressão comercial por transferência de créditos.</li><li>Margem sensível a aumento de complexidade operacional.</li><li>Empresa ainda sem maturidade documental suficiente.</li></ul></div><div class="sidebox gold"><h3>Pontos de atenção</h3><ul><li>O próprio optante não se apropria de créditos de IBS/CBS.</li><li>Adquirente do regime regular pode ter crédito limitado ao valor efetivamente pago via Simples.</li><li>Clientes empresariais podem comparar fornecedores pela capacidade de gerar crédito.</li></ul></div></div></div>
+<div class="tabpanel" id="tab-hibrido"><div class="decision"><div class="sidebox"><h3>Quando tende a ser avaliado</h3><ul><li>Venda relevante para empresas do regime regular.</li><li>Participação em cadeias B2B, fornecimento recorrente ou contratos corporativos.</li><li>Cliente valoriza crédito amplo de IBS/CBS.</li><li>Empresa tem organização contábil, fiscal e documental suficiente.</li></ul></div><div class="sidebox gold"><h3>Custo da escolha</h3><ul><li>IBS e CBS deixam de ser recolhidos pelo regime único.</li><li>Aumentam exigências de apuração, controle de créditos e fluxo de caixa.</li><li>Decisão exige simulação, não intuição.</li><li>Pode haver vedação de retorno em hipóteses específicas, como recebimento de ressarcimento de créditos.</li></ul></div></div></div>
+<div class="tabpanel" id="tab-comparativo"><table class="table"><tr><th>Critério</th><th>Simples unificado</th><th>Regime híbrido</th></tr><tr><td>Complexidade</td><td>Menor</td><td>Maior</td></tr><tr><td>Crédito do próprio optante</td><td>Não há apropriação de créditos de IBS/CBS</td><td>Há apuração pelo regime regular, com lógica de créditos</td></tr><tr><td>Crédito do cliente B2B</td><td>Limitado ao valor pago por meio do Simples</td><td>Tende a ser mais competitivo para clientes que tomam crédito</td></tr><tr><td>Perfil mais provável</td><td>B2C, varejo local, serviços ao consumidor</td><td>B2B, atacado, fornecedor corporativo, cadeia industrial ou logística</td></tr></table></div>
+</section>
+<section class="section" id="creditos">
+<div class="chapter"><span class="num">05</span></div><h2>Créditos e competitividade</h2><p class="lead">A não cumulatividade ampla desloca parte da concorrência para a qualidade fiscal do fornecedor. No novo modelo, o cliente empresarial não olhará apenas o preço: também olhará o crédito aproveitável.</p>
+<div class="grid g3">
+<div class="card pad"><div class="card-top"></div><h3>Fornecedor B2C</h3><p>Quando o adquirente é consumidor final, a discussão de crédito costuma ter menor peso. A atenção concentra-se em preço, margem e conformidade documental.</p></div>
+<div class="card pad"><div class="card-top gold"></div><h3>Fornecedor B2B</h3><p>Quando o adquirente é contribuinte do regime regular, o crédito gerado pela compra pode influenciar a escolha do fornecedor.</p></div>
+<div class="card pad"><div class="card-top"></div><h3>Fornecedor misto</h3><p>Quando há carteira B2C e B2B, a decisão deve ser segmentada por receita, cliente, margem, recorrência e peso do crédito na negociação.</p></div>
+</div>
+<div class="callout red"><div class="clabel">Risco comercial</div><p>Uma empresa do Simples que vende para grandes clientes pode perder competitividade se o cliente perceber que a compra gera crédito inferior ao de outro fornecedor sujeito ao regime regular. A solução não é optar automaticamente pelo regime híbrido, mas sim simular o impacto.</p></div>
+</section>
+<section class="section" id="setores">
+<div class="chapter"><span class="num">06</span></div><h2>Matriz por perfil de empresa</h2><p class="lead">A Reforma não produz o mesmo efeito para todos. O setor, o tipo de cliente e a intensidade de insumos definem a prioridade de análise.</p>
+<div class="filters no-print"><button class="filter active" onclick="filterCards('all',this)">Todos</button><button class="filter" onclick="filterCards('b2c',this)">B2C</button><button class="filter" onclick="filterCards('b2b',this)">B2B</button><button class="filter" onclick="filterCards('servico',this)">Serviços</button><button class="filter" onclick="filterCards('comercio',this)">Comércio</button></div>
+<div class="grid g3" id="matrix">
+<div class="card pad matrix-card" data-cat="b2c comercio"><h3>Varejo local B2C</h3><p>Prioridade: nota fiscal, preço, margem e controle de faturamento. Regime unificado tende a ser ponto de partida, salvo cadeia específica.</p></div>
+<div class="card pad matrix-card" data-cat="b2b comercio"><h3>Atacado ou distribuidor</h3><p>Prioridade: crédito do cliente, contratos, margem e simulação do regime híbrido. Alto risco de comparação fiscal por adquirentes.</p></div>
+<div class="card pad matrix-card" data-cat="servico b2c"><h3>Serviços ao consumidor</h3><p>Prioridade: NFS-e, precificação, retenções residuais e comunicação clara ao cliente final. Crédito do adquirente tende a ser menos relevante.</p></div>
+<div class="card pad matrix-card" data-cat="servico b2b"><h3>Serviços para empresas</h3><p>Prioridade: competitividade contratual, crédito do tomador, revisão de propostas e cláusulas tributárias.</p></div>
+<div class="card pad matrix-card" data-cat="b2b comercio"><h3>Indústria ou pequena produção</h3><p>Prioridade: insumos, crédito, estoque, documento fiscal e contratos de fornecimento. Exige análise de cadeia.</p></div>
+<div class="card pad matrix-card" data-cat="b2c b2b"><h3>Empresa mista</h3><p>Prioridade: separar receitas por canal, cliente e margem. A decisão não deve ser tomada por sensação geral de faturamento.</p></div>
+</div>
+</section>
+<section class="section" id="documentos">
+<div class="chapter"><span class="num">07</span></div><h2>Documentos fiscais e rotina digital</h2><p class="lead">No novo modelo, a nota fiscal deixa de ser apenas documento de venda e passa a ser a principal evidência da apuração. O erro documental tende a gerar erro de crédito, erro de preço e risco de autuação.</p>
+<div class="grid g2">
+<div class="card pad"><h3>O que revisar no cadastro</h3><p>NCM, CNAE, descrição de produtos e serviços, natureza da operação, município de destino, CFOP quando aplicável, parametrização do ERP e segregação de receitas.</p></div>
+<div class="card pad"><h3>O que revisar nas notas</h3><p>Campos de IBS/CBS, classificação tributária, base de cálculo, dados do adquirente, local de consumo, informações de crédito e consistência com contratos.</p></div>
+<div class="card pad"><h3>O que revisar nos clientes</h3><p>Quem compra como consumidor final, quem compra como contribuinte do regime regular, quem exige crédito e quem tem contrato de fornecimento recorrente.</p></div>
+<div class="card pad"><h3>O que revisar no sistema</h3><p>Integração fiscal, parâmetros do Simples, emissão de NF-e/NFS-e, controle de faturamento acumulado, relatórios e conciliação.</p></div>
+</div>
+<div class="callout green"><div class="clabel">Regra operacional</div><p>Para clientes One, a preparação documental deve anteceder a decisão de regime. Empresa sem cadastro confiável não deve decidir por regime mais complexo sem saneamento prévio.</p></div>
+</section>
+<section class="section" id="riscos">
+<div class="chapter"><span class="num">08</span></div><h2>Riscos de exclusão e alertas de faturamento</h2><p class="lead">O limite de faturamento do Simples continua sendo eixo estrutural do regime. A diferença é que, com a Reforma, ultrapassar faixas ou deixar de planejar a transição pode afetar não apenas imposto, mas contratos, preço e continuidade comercial.</p>
+<div class="grid g4">
+<div class="stat"><div class="big">75%</div><div class="label">Alerta preventivo</div></div>
+<div class="stat"><div class="big">90%</div><div class="label">Zona de decisão</div></div>
+<div class="stat"><div class="big">100%</div><div class="label">Limite crítico</div></div>
+<div class="stat"><div class="big">4,8 mi</div><div class="label">Teto anual do Simples</div></div>
+</div>
+<table class="table" style="margin-top:18px"><tr><th>Sinal</th><th>Risco</th><th>Resposta One</th></tr><tr><td>Faturamento acelerado</td><td>Exclusão ou mudança de regime sem preparação.</td><td>Monitoramento mensal, projeção e reunião de orientação.</td></tr><tr><td>Cliente B2B exigindo crédito</td><td>Perda de competitividade em contratos.</td><td>Simulação entre Simples unificado e regime híbrido.</td></tr><tr><td>Cadastro fiscal desorganizado</td><td>Erro em nota, crédito e apuração.</td><td>Saneamento cadastral e orientação de emissão.</td></tr><tr><td>Pendência fiscal</td><td>Risco de impedimento, exclusão ou certidão negativa comprometida.</td><td>Acompanhamento de CNDs e regularização dentro do escopo contratado.</td></tr></table>
+</section>
+<section class="section" id="contratos">
+<div class="chapter"><span class="num">09</span></div><h2>Preço, contratos e margem</h2><p class="lead">A Reforma exige que o empresário deixe de tratar tributo como “custo invisível”. Preço, cláusula tributária e reajuste contratual passam a integrar a gestão fiscal.</p>
+<div class="grid g3">
+<div class="card pad"><h3>Preço</h3><p>Revisar se o preço atual absorve a transição de tributos, eventuais créditos do adquirente e custos de conformidade.</p></div>
+<div class="card pad"><h3>Contratos</h3><p>Incluir cláusulas sobre alterações tributárias, reequilíbrio, destaque de tributos e mudanças na forma de apuração.</p></div>
+<div class="card pad"><h3>Margem</h3><p>Medir margem por produto, serviço, canal e cliente. Sem DRE e conciliação, a decisão tributária será imprecisa.</p></div>
+</div>
+<div class="callout"><div class="clabel">Orientação prática</div><p>Antes de aceitar desconto por pressão de cliente B2B, a empresa deve verificar se o problema é preço nominal ou perda de crédito tributário para o adquirente.</p></div>
+</section>
+<section class="section" id="one">
+<div class="chapter"><span class="num">10</span></div><h2>Como o One by HMPX acompanha essa transição</h2><p class="lead">O One foi desenhado para empresas do Simples Nacional que precisam de contabilidade consultiva, não apenas de guias. Na Reforma, essa diferença deixa de ser comercial e passa a ser operacional.</p>
+<div class="grid g3">
+<div class="card pad"><div class="card-top"></div><h3>Monitoramento contínuo</h3><p>Acompanhamento de faturamento acumulado, risco de exclusão do Simples e alterações legislativas que impactem o regime.</p></div>
+<div class="card pad"><div class="card-top gold"></div><h3>Relatório trimestral</h3><p>Síntese fiscal, DRE simplificada, alertas e orientações estratégicas em linguagem acessível ao empresário.</p></div>
+<div class="card pad"><div class="card-top"></div><h3>Reunião consultiva</h3><p>Leitura estratégica do trimestre, decisões de preço, regime, documentação e crescimento com base em dados reais.</p></div>
+<div class="card pad"><h3>SLA de atendimento</h3><p>Atendimento por WhatsApp central e e-mail institucional, com prazos de resposta definidos conforme complexidade da demanda.</p></div>
+<div class="card pad"><h3>Blindagem tributária ativa</h3><p>Revisão de enquadramento, certidões, pendências e prevenção de autuações dentro do escopo do One.</p></div>
+<div class="card pad"><h3>Migração orientada</h3><p>Quando a empresa ultrapassa o porte do Simples, a evolução para a HMPX principal pode ser conduzida como transição estruturada.</p></div>
+</div>
+</section>
+<section class="section" id="checklist">
+<div class="chapter"><span class="num">11</span></div><h2><em>Checklist</em> operacional do cliente</h2><p class="lead">Use este roteiro para verificar se a empresa está minimamente preparada para a primeira análise da Reforma Tributária dentro do acompanhamento One.</p>
+<div class="mini no-print">Progresso do <em>checklist</em>: <span id="ckcount">0/12</span></div><div class="progress no-print"><div id="ckbar"></div></div>
+<div class="checklist">
+<label class="ck"><input onchange="updateChecklist()" type="checkbox"/><span>Confirmar regime atual e situação cadastral no Simples Nacional.</span></label>
+<label class="ck"><input onchange="updateChecklist()" type="checkbox"/><span>Levantar faturamento dos últimos 12 meses e projeção dos próximos 12 meses.</span></label>
+<label class="ck"><input onchange="updateChecklist()" type="checkbox"/><span>Separar receitas por canal: consumidor final, empresas do regime regular e vendas mistas.</span></label>
+<label class="ck"><input onchange="updateChecklist()" type="checkbox"/><span>Identificar clientes B2B que exigem crédito tributário ou renegociam preço por crédito.</span></label>
+<label class="ck"><input onchange="updateChecklist()" type="checkbox"/><span>Revisar cadastro de produtos, serviços, NCM, CNAE e descrição fiscal.</span></label>
+<label class="ck"><input onchange="updateChecklist()" type="checkbox"/><span>Validar emissão de NF-e, NFS-e, CT-e ou documentos correlatos, conforme a operação.</span></label>
+<label class="ck"><input onchange="updateChecklist()" type="checkbox"/><span>Mapear fornecedores essenciais e verificar se estão no Simples ou no regime regular.</span></label>
+<label class="ck"><input onchange="updateChecklist()" type="checkbox"/><span>Revisar contratos recorrentes quanto a reajuste, alteração tributária e equilíbrio econômico.</span></label>
+<label class="ck"><input onchange="updateChecklist()" type="checkbox"/><span>Conferir pendências fiscais, CNDs, parcelamentos e regularidade cadastral.</span></label>
+<label class="ck"><input onchange="updateChecklist()" type="checkbox"/><span>Preparar DRE simplificada para medir margem antes da simulação.</span></label>
+<label class="ck"><input onchange="updateChecklist()" type="checkbox"/><span>Simular Simples unificado versus regime híbrido quando houver relevância B2B.</span></label>
+<label class="ck"><input onchange="updateChecklist()" type="checkbox"/><span>Registrar a decisão com justificativa técnica e revisão periódica.</span></label>
+</div>
+</section>
+<section class="section" id="plano">
+<div class="chapter"><span class="num">12</span></div><h2>Plano de ação em três ciclos</h2><p class="lead">A implementação deve ser gradual. O objetivo é evitar decisões apressadas em setembro de 2026 e preparar a empresa para 2027 com dados consistentes.</p>
+<div class="grid g3">
+<div class="card pad"><div class="card-top"></div><h3>0-30 dias · Diagnóstico</h3><p>Levantamento de faturamento, clientes, fornecedores, documentos fiscais, pendências e perfil de operação.</p></div>
+<div class="card pad"><div class="card-top gold"></div><h3>31-60 dias · Saneamento</h3><p>Correção de cadastros, parametrização, revisão de contratos e organização de dados para simulação.</p></div>
+<div class="card pad"><div class="card-top"></div><h3>61-90 dias · Decisão</h3><p>Simulação comparativa, definição de regime para IBS/CBS quando cabível, orientação de preço e documentação da decisão.</p></div>
+</div>
+</section>
+<section class="section" id="faq">
+<div class="chapter"><span class="num">13</span></div><h2>Perguntas frequentes do empresário</h2><p class="lead">As respostas abaixo foram formuladas para conversas com clientes do One by HMPX, com linguagem prática e sem perda de precisão técnica.</p>
+<div class="accordion open"><div class="acc-head" onclick="toggleAcc(this)">O Simples Nacional vai acabar? <span>+</span></div><div class="acc-body">Não. O Simples Nacional permanece como regime favorecido para microempresas e empresas de pequeno porte. O que muda é o ambiente de decisão: IBS e CBS passam a exigir análise de créditos, documentos, clientes e opção de apuração.</div></div>
+<div class="accordion open"><div class="acc-head" onclick="toggleAcc(this)">Vou continuar pagando DAS? <span>+</span></div><div class="acc-body">Em regra, sim. Contudo, a legislação permite que o optante pelo Simples apure IBS e CBS pelo regime regular em determinadas condições, hipótese em que essas parcelas não serão cobradas pelo regime único.</div></div>
+<div class="accordion open"><div class="acc-head" onclick="toggleAcc(this)">Todo cliente One deve optar pelo regime híbrido? <span>+</span></div><div class="acc-body">Não. A opção depende do perfil da empresa, da proporção de vendas B2B, da margem, da maturidade documental e do peso do crédito para os clientes. A decisão deve ser simulada.</div></div>
+<div class="accordion open"><div class="acc-head" onclick="toggleAcc(this)">Vender para consumidor final muda a análise? <span>+</span></div><div class="acc-body">Sim. Quando o cliente é consumidor final, a discussão sobre crédito do adquirente tende a ter menor peso. Nesses casos, a análise costuma concentrar-se em preço, margem, nota fiscal e regularidade.</div></div>
+<div class="accordion open"><div class="acc-head" onclick="toggleAcc(this)">Por que setembro de 2026 é importante? <span>+</span></div><div class="acc-body">Porque a Resolução CGSN n.º 186/2026 definiu que a opção pelo Simples Nacional para 2027 e, de forma excepcional, a opção pelo regime regular de IBS/CBS para janeiro a junho de 2027 devem ser formalizadas entre 1.º e 30 de setembro de 2026.</div></div>
+<div class="accordion open"><div class="acc-head" onclick="toggleAcc(this)">O que devo fazer agora? <span>+</span></div><div class="acc-body">Organizar cadastro, documentos fiscais, clientes, fornecedores, contratos, faturamento e DRE. Depois disso, a equipe One poderá conduzir simulação e orientar a decisão.</div></div>
+</section>
+<section class="section" id="fontes">
+<div class="chapter"><span class="num">14</span></div><h2>Fontes normativas e referências</h2><p class="lead">O material foi construído com base nas normas estruturantes da Reforma Tributária do Consumo e nas referências institucionais do One by HMPX.</p>
+<ol class="source-list">
+<li>Constituição da República Federativa do Brasil de 1988.</li>
+<li>Emenda Constitucional n.º 132, de 20 de dezembro de 2023.</li>
+<li>Lei Complementar n.º 123, de 14 de dezembro de 2006.</li>
+<li>Lei Complementar n.º 214, de 16 de janeiro de 2025.</li>
+<li>Lei Complementar n.º 227, de 13 de janeiro de 2026.</li>
+<li>Decreto n.º 12.955, de 29 de abril de 2026 - Regulamento da CBS.</li>
+<li>Resolução CGIBS n.º 6, de 30 de abril de 2026 - Regulamento do IBS.</li>
+<li>Portaria Conjunta MF/CGIBS n.º 7, de 30 de abril de 2026.</li>
+<li>Resolução CGSN n.º 186, de 17 de abril de 2026.</li>
+<li>Materiais institucionais One by HMPX.</li>
+</ol>
+<div class="callout green">
+<div class="clabel">Nota de uso</div>
+<p>Este manual é material educativo e informativo. A opção por regime, alteração de preço, revisão contratual ou estratégia tributária deve ser precedida de análise individualizada da operação, do faturamento, da carteira de clientes, dos fornecedores e dos documentos fiscais da empresa.</p>
+</div>
 <div class="footer-doc">
-    <div>
-        <h2>One by HMPX</h2>
-        <p>Uma contabilidade, todas as respostas.</p>
-        <p>HMPX & IIFET · Ribeirão Preto · Atendimento Nacional</p>
-        <p style="margin-top: 12px;">
-            <a href="mailto:atendimento@hmpx.com.br">atendimento@hmpx.com.br</a> · 
-            <a href="https://www.hmpx.com.br" target="_blank">www.hmpx.com.br</a> · 
-            <a href="tel:+551636204545">(16) 3620-4545</a>
-        </p>
-    </div>
-    <div class="footer-doc-right">
-        <p style="font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.4;">
-            Todos os direitos reservados © HMPX Inteligência Fiscal e Tributária · Junho de 2026<br>
-            <span style="color: var(--gold); opacity: 0.8;">Estudo técnico-estratégico de uso consultivo</span>
-        </p>
-    </div>
-  </div>
-  </section>
-  </div>
+<div class="footer-doc-left">
+<h2>One by HMPX</h2>
+<p>Uma contabilidade, todas as respostas.</p>
+<p>HMPX &amp; IIFET · Ribeirão Preto · Atendimento Nacional</p>
+<p class="contact-line">
+<a>atendimento@hmpx.com.br</a> · <a>iifet@iifet.com.br</a>
+</p>
+<p class="contact-line">
+<a href="https://www.hmpx.com.br/" rel="noopener" target="_blank">www.hmpx.com.br</a> · <a>(16) 3620-4545</a>
+</p>
+</div>
+<div class="footer-doc-right">
+<div class="footer-label">Endereço institucional</div>
+<p>Av. Braz Olaia Acosta, 2100 - Nova Aliança,<br/>Ribeirão Preto - SP, CEP 14026-610</p>
+<p class="rights">© 2026 HMPX &amp; IIFET Inteligência Fiscal, Empresarial e Tributária. Todos os direitos reservados.</p>
+</div>
+</div>
+</section>
+</div>
 </main>
 </div>
-<script>
-function showTab(id,btn){document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.tabpanel').forEach(p=>p.classList.remove('active'));document.getElementById('tab-'+id).classList.add('active')}
+<script>function showTab(id,btn){document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.tabpanel').forEach(p=>p.classList.remove('active'));document.getElementById('tab-'+id).classList.add('active')}
 function filterCards(cat,btn){document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.matrix-card').forEach(c=>{c.classList.toggle('hide',cat!=='all' && !c.dataset.cat.includes(cat))})}
 function toggleAcc(head){head.parentElement.classList.toggle('open')}
 function expandAll(){document.querySelectorAll('.accordion').forEach(a=>a.classList.add('open'))}
 function collapseAll(){document.querySelectorAll('.accordion').forEach(a=>a.classList.remove('open'))}
-function updateChecklist(){let boxes=[...document.querySelectorAll('.ck input')];let done=boxes.filter(b=>b.checked).length;document.getElementById('ckcount').textContent=done+'/'+boxes.length;document.getElementById('ckbar').style.width=(done/boxes.length*100)+'%'}
-const navLinks=[...document.querySelectorAll('.nav a')];const ids=navLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);window.addEventListener('scroll',()=>{let pos=window.scrollY+160;let cur=ids[0];ids.forEach(s=>{if(s.offsetTop<=pos)cur=s});navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur.id))});
-</script>
+function updateChecklist(){let boxes=[...document.querySelectorAll('.ck input')];let done=boxes.filter(b=>b.checked).length;let count=document.getElementById('ckcount');let bar=document.getElementById('ckbar');if(count)count.textContent=done+'/'+boxes.length;if(bar)bar.style.width=(done/boxes.length*100)+'%'}
+function setActiveInternalLink(targetId){document.querySelectorAll('.nav a[href^="#"]').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+targetId))}
+document.querySelectorAll('.nav a[href^="#"], .route-card[href^="#"]').forEach(link=>{
+  link.addEventListener('click',event=>{
+    const href=link.getAttribute('href');
+    const target=document.querySelector(href);
+    if(!target)return;
+    event.preventDefault();
+    target.scrollIntoView({behavior:'smooth',block:'start'});
+    history.replaceState(null,'',href);
+    setActiveInternalLink(href.slice(1));
+  });
+});
+const navLinks=[...document.querySelectorAll('.nav a[href^="#"]')];
+const ids=navLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+window.addEventListener('scroll',()=>{
+  let pos=window.scrollY+160;
+  let cur=ids[0];
+  ids.forEach(s=>{if(s.offsetTop<=pos)cur=s});
+  if(cur)setActiveInternalLink(cur.id);
+});</script>
 </body>
 </html>
